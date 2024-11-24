@@ -7,7 +7,7 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <header className='bg-[#7E33E0] '>
+    <header className='bg-[#7E33E0] py-3'>
         <div className="container mx-auto flex justify-between text-white">
             <div className="flex gap-5">
                 <div className="flex items-center gap-2">
@@ -24,7 +24,7 @@ const Header = () => {
                 </div>
             </div>
             <div className="">
-                <ul className="flex gap-3">
+                <ul className="flex gap-3 items-center">
                     <li >
                         <select name="" id="" className="bg-transparent">
                             <option value="">English</option>
@@ -39,7 +39,7 @@ const Header = () => {
                     </li>
                     <li className="flex items-center"><p>Login</p> <CiUser /></li>
                     <li className="flex items-center"><p>Wishlist</p> <CiHeart /></li>
-                    <li className="items-center"> <IoCartOutline /> </li>
+                    <li className="items-center text-2xl"> <IoCartOutline /> </li>
                 </ul>
             </div>
         </div>
