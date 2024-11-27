@@ -8,7 +8,7 @@ import React from 'react'
 const Header = () => {
   return (
     <header className='bg-[#7E33E0] py-3'>
-        <div className="container mx-auto flex:lg justify-between text-white">
+        <div className="container mx-auto lg:flex justify-between text-white">
             <div className="flex gap-5">
                 <div className="flex items-center gap-2">
                     <CiMail />
