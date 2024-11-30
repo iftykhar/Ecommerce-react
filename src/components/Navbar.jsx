@@ -3,6 +3,7 @@ import Logo from "../assets/logo.png"
 import {Link} from 'react-router-dom';
 import { CiSearch } from "react-icons/ci";
 import { TiThMenu } from "react-icons/ti";
+import { ImCross } from "react-icons/im";
 
 
 
@@ -43,7 +44,8 @@ const Navbar = () => {
                
             </div>
             <div onClick={handleMenu} className="lg:hidden">
-                <TiThMenu />
+                {menuShow == true ? <ImCross /> : <TiThMenu /> }
+                
             </div>
         </div>
     </nav>
