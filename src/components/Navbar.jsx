@@ -13,8 +13,8 @@ const Navbar = () => {
 
 
     const handleMenu = () => {
-        setmenuShow(true);
-        console.log(menuShow);
+        setmenuShow(!menuShow);
+        
         
     }
 
@@ -26,8 +26,12 @@ const Navbar = () => {
             <div className="">
                 <img src={Logo} alt="" />
             </div>
-            <div className="lg:display-block">
-                <ul className='flex justify-between gap-12'>
+            <div className="lg:block">
+                <ul
+                    className={`fixed top-0 left-0 h-screen w-3/4 bg-black text-white flex flex-col items-start gap-6 p-6 transition-transform duration-300 ${
+                    menuShow ? 'translate-x-0' : '-translate-x-full'
+                    } lg:static lg:flex lg:flex-row lg:gap-12 lg:bg-transparent lg:text-black lg:h-auto lg:w-auto lg:translate-x-0`}
+                >
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/Shop">Shop</Link></li>
                     <li><Link >Pages</Link></li>
@@ -37,7 +41,7 @@ const Navbar = () => {
             </div>
             
             <div className="flex items-center  ">
-                <input className='border-2 h-10 w-48' type="search" />
+                <input className='border-2 h-10 lg:w-48 w-36' type="search" />
                 <div className='text-white p-5 bg-[#FB2E86] h-10 flex items-center justify-center'>
                      <CiSearch className='text-2xl text-white' />
                 </div>
