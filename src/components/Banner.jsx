@@ -1,45 +1,35 @@
-import React from 'react'
-import Slider from "react-slick";
+// import React from 'react'
+// import Slider from "react-slick";
+// import promotional from "../assets/promotional.png"
 
 
-function SimpleSlider() {
-    var settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-    };
+
+// const Banner = () => {
+//   return (
+//     <section>
+//         <div className="container mx-auto   ">
+//             <div className="">
+//                 <img src="{promotional}" alt="promotional image" />
+//             </div>
+//         </div>
+//     </section>
+//   )
+// }
+
+// export default Banner
+import React from 'react';
+import promotional from "../assets/promotional.png";
 
 const Banner = () => {
   return (
     <section>
-        <div className="container mx-auto   ">
-            <div className="">
-            <Slider {...settings}>
-                <div>
-                    <h3>1</h3>
-                </div>
-                <div>
-                    <h3>2</h3>
-                </div>
-                <div>
-                    <h3>3</h3>
-                </div>
-                <div>
-                    <h3>4</h3>
-                </div>
-                <div>
-                    <h3>5</h3>
-                </div>
-                <div>
-                    <h3>6</h3>
-                </div>
-            </Slider>
+        <div className="">
+            <div>
+                <img src={promotional} alt="promotional image" />
             </div>
         </div>
     </section>
-  )
+  );
 }
 
-export default Banner
+export default Banner;
