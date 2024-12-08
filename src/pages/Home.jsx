@@ -4,9 +4,9 @@ import Banner from '../components/Banner'
 const Home = () => {
   return (
     <section>
-      <div className="container mx-auto">
+      {/* <div className="container mx-auto"> */}
         <Banner />
-      </div>
+      {/* </div> */}
     </section>
   )
 }
