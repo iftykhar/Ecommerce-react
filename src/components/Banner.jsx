@@ -1,12 +1,7 @@
-// import React from 'react'
-// import Slider from "react-slick";
-// import promotional from "../assets/promotional.png"
-
-
-// export default Banner;
 import React from 'react';
 import Slider from 'react-slick';
 import promotional from "../assets/promotional.png"; 
+import sofa from "../assets/sofa.png";
 
 const Banner = () => {
   
@@ -33,15 +28,15 @@ const Banner = () => {
     // </section>
     <section>
         <div className="container mx-auto">
-            <div className="">
-                <div className="">
-                    <h4>Best Furniture For Your Castle....</h4>
+            <div className="flex justify-between items-center">
+                <div className="w-1/2">
+                    <h4 className='text-[#FB2E86] font-bold'>Best Furniture For Your Castle....</h4>
                     <h2>New Furniture Collection Trends in 2020</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing
                     in phasellus non in justo.</p>
                 </div>
-                <div className="">
-                    <img src="" alt="" />
+                <div className="w-[40%] flex justify-end">
+                    <img className="w-2/3" src={sofa} alt="" />
                 </div>
             </div>
         </div>
