@@ -3,70 +3,51 @@
 // import promotional from "../assets/promotional.png"
 
 
-
-// const Banner = () => {
-//   return (
-//     <section>
-//         <div className="container mx-auto   ">
-//             <div className="">
-//                 <img src="{promotional}" alt="promotional image" />
-//             </div>
-//         </div>
-//     </section>
-//   )
-// }
-
-// export default Banner
-// import React from 'react';
-// import promotional from "../assets/promotional.png";
-
-// const Banner = () => {
-//   return (
-//     <section>
-//         <div className="">
-//             <div>
-//                 <img src={promotional} alt="promotional image" />
-//             </div>
-//         </div>
-//     </section>
-//   );
-// }
-
 // export default Banner;
 import React from 'react';
 import Slider from 'react-slick';
-import promotional from "../assets/promotional.png";
+import promotional from "../assets/promotional.png"; 
 
 const Banner = () => {
+  
+  const images = [promotional, promotional, promotional]; 
+
   const settings = {
     dots: true,
-    infinite: false, // Disable infinite loop (images will stop after the last one)
-    speed: 500, // Transition speed between slides
-    slidesToShow: 1, // Show one image at a time
-    slidesToScroll: 1, // Scroll one image at a time
+    infinite: false, 
+    slidesToShow: 1, 
+    slidesToScroll: 1, 
   };
 
   return (
-    <section className="w-full">
-      <div className=" mx-auto">
-        <Slider {...settings}>
-          {/* Slide 1 */}
-          <div>
-            <img src={promotional} alt="promotional image 1" className="w-full h-auto" />
-          </div>
-          {/* Slide 2 (Uncomment to add more slides) */}
-          <div>
-            <img src={promotional} alt="promotional image 2" className="w-full h-auto" />
-          </div>
-          {/* Slide 3 */}
-          <div>
-            <img src={promotional} alt="promotional image 3" className="w-full h-auto" />
-          </div>
-          {/* Add more slides as needed */}
-        </Slider>
-      </div>
+    // <section className="w-full">
+    //   <div className=" mx-auto">
+    //     <Slider {...settings}>
+    //       {images.map((image, index) => (
+    //         <div key={index} className="flex justify-center">
+    //           <img src={image} alt={`promotional image ${index + 1}`} className="w-full h-auto" />
+    //         </div>
+    //       ))}
+    //     </Slider>
+    //   </div>
+    // </section>
+    <section>
+        <div className="container mx-auto">
+            <div className="">
+                <div className="">
+                    <h4>Best Furniture For Your Castle....</h4>
+                    <h2>New Furniture Collection Trends in 2020</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing
+                    in phasellus non in justo.</p>
+                </div>
+                <div className="">
+                    <img src="" alt="" />
+                </div>
+            </div>
+        </div>
     </section>
   );
 }
 
 export default Banner;
+
