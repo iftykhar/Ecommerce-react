@@ -26,13 +26,13 @@ const Banner = () => {
     //     </Slider>
     //   </div>
     // </section>
-    <section>
+    <section className='bg-[#f2f0ff]' >
         <div className="container mx-auto">
             <div className="flex justify-between items-center">
                 <div className="w-1/2">
-                    <h4 className='text-[#FB2E86] font-bold'>Best Furniture For Your Castle....</h4>
-                    <h2>New Furniture Collection Trends in 2020</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing
+                    <h4 className='text-[#FB2E86]  font-bold font-lato pb-3'>Best Furniture For Your Castle....</h4>
+                    <h2 className='text-[53px] font-josef pb-4 font-bold'>New Furniture Collection Trends in 2020</h2>
+                    <p className='text-[16px] font-lato font-bold leading-7'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing
                     in phasellus non in justo.</p>
                 </div>
                 <div className="w-[40%] flex justify-end">
