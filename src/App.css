@@ -40,3 +40,12 @@
 .read-the-docs {
   color: #888;
 } */
+
+.slick-dots li button::before{
+  color: red !important;
+}
+
+.slick-dots li button {
+  height: 5px !important;
+  width: 2px !important;
+}
