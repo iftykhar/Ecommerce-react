@@ -47,5 +47,6 @@
 
 .slick-dots li button {
   height: 5px !important;
-  width: 2px !important;
+  width: 30px !important;
+  background-color: blue !important ;
 }
