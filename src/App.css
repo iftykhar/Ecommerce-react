@@ -43,10 +43,15 @@
 
 .slick-dots li button::before{
   color: red !important;
+  display: none !important;
 }
 
 .slick-dots li button {
   height: 5px !important;
   width: 30px !important;
   background-color: blue !important ;
+}
+
+.slick-dots li {
+  margin-right: 18px !important;
 }
