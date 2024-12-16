@@ -46,12 +46,20 @@
   display: none !important;
 }
 
-.slick-dots li button {
-  height: 5px !important;
-  width: 30px !important;
-  background-color: blue !important ;
-}
 
 .slick-dots li {
   margin-right: 18px !important;
+  height: 5px !important;
+  width: 30px !important;
+  background-color: blue !important ;
+  
+}
+
+.slick-dots li button{
+  width: 100% !important;
+  border-radius: 10px !important;
+}
+
+.slick-dots li.slick-active{
+  background-color: red !important;
 }
