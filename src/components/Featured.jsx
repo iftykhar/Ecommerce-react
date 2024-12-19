@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import chair from '../assets/chair.png';
 import Slider from "react-slick";
+import { apidata } from './ContextApi';
+
 
 
 const Featured = () => {
@@ -16,7 +18,9 @@ const Featured = () => {
         // autoplaySpeed: 20000,
       };
 
+    let data = useContext(apidata);
 
+    console.log(data);
   return (
     <section>
         <div className="container mx-auto">

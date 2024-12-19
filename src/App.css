@@ -52,13 +52,13 @@
   height: 5px !important;
   width: 30px !important;
   background-color: blue !important ;
+  border-radius: 8px !important;
   
 }
 
 .slick-dots li button{
   width: 100% !important;
-  /* border: 2px solid black !important; */
-  border-radius: 50px !important;
+  
 }
 
 .slick-dots li.slick-active{
