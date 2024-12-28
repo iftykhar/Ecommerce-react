@@ -21,6 +21,7 @@ const Featured = () => {
     let data = useContext(apidata);
 
     console.log(data);
+    
   return (
     <section>
         <div className="container mx-auto">

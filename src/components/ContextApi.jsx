@@ -3,9 +3,9 @@ import React, { createContext } from 'react'
 
 const apidata = createContext();
 
-const ContextApi = () => {
+const ContextApi = ({children}) => {
   return (
-    <apidata.Provider value="abc">{Children}</apidata.Provider>
+    <apidata.Provider value="abc">{children}</apidata.Provider>
   )
 }
 
