@@ -1,7 +1,9 @@
 import React, { useContext } from 'react'
 import chair from '../assets/chair.png';
 import Slider from "react-slick";
+// import { apidata } from './ContextApi';
 import { apidata } from './ContextApi';
+
 
 
 
@@ -18,10 +20,12 @@ const Featured = () => {
         // autoplaySpeed: 20000,
       };
 
+    // let data = useContext(apidata);
+    // let data = useContext(apidata);
+    // console.log(data);
     let data = useContext(apidata);
+    console.log("Context data in Featured.jsx:", data);
 
-    console.log(data);
-    
   return (
     <section>
         <div className="container mx-auto">
