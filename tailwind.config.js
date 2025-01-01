@@ -5,16 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    container:{
-      padding: '20px',
+    container: {
+      padding: '20px'
     },
     extend: {
-      fontFamily : {
-       lato : ['"Lato", sans-serif'],
-       josef : ['"Josefin Sans", sans-serif']
+      fontFamily :{
+        'Lato' :["Lato", "sans-serif"],
+        'josef' :["Josefin Sans", "sans-serif"]
       }
     },
   },
   plugins: [],
 }
-
