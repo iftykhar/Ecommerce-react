@@ -44,7 +44,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#EEEFFB] py-10 px-5">
+    <footer className="bg-[#EEEFFB] py-10 px-5 pt-5">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
         {/* Branding */}
         <div>
