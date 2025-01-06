@@ -23,6 +23,7 @@ const Shop = () => {
     
   }
 
+  let [catShow, setCatShow] = useState(false)
   
 
   return (
@@ -79,17 +80,21 @@ const Shop = () => {
         </div>
         <div className="flex">
           <div className="w-[20%]">
-            <h2 className="text-[24px] font-sans font-bold flex items-center gap-3">Shop By Category <IoMdArrowDropdownCircle /></h2>
-            <ul>
+            <h2 onClick={()=>setCatShow(!catShow)} className="text-[24px] font-sans font-bold flex items-center gap-3">Shop By Category <IoMdArrowDropdownCircle /></h2>
+            {catShow &&
+            
+            <ul className='h-60 overflow-y-scroll'>
               {category.map((item)=>(
                 <li onClick={()=>handleCategory(item)} className='p-4 border-b-[1px]'>{item}</li>
               ))}
             </ul>
+
+            }
           </div>
           <div className="w-[80%] flex flex-wrap justify-between py-2">
             {cat.length > 0 ? 
              cat.map((item) => (
-              <div className="!w-[32%] shadow-lg group mb-5" key={item.id}>
+              <div className="!w-[32%] shadow-lg group " key={item.id}>
                   <div className="flex justify-center bg-[#F6F7FB] pt-12 pb-4 px-6 relative overflow-hidden">
                       <img src={item.thumbnail} alt="" />
                       <button className='text-base rounded-md absolute left-1/2 -translate-x-1/2 px-10 py-2 bg-green-500 -bottom-16 duration-300 ease-in-out group-hover:bottom-2'>View Details</button>
@@ -108,7 +113,7 @@ const Shop = () => {
             ))
             :
             data.map((item) => (
-              <div className="!w-[32%] shadow-lg group mb-5" key={item.id}>
+              <div className="!w-[32%] shadow-lg group " key={item.id}>
                   <div className="flex justify-center bg-[#F6F7FB] pt-12 pb-4 px-6 relative overflow-hidden">
                       <img src={item.thumbnail} alt="" />
                       <button className='text-base rounded-md absolute left-1/2 -translate-x-1/2 px-10 py-2 bg-green-500 -bottom-16 duration-300 ease-in-out group-hover:bottom-2'>View Details</button>
