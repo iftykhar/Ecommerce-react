@@ -37,7 +37,7 @@ const ContextApi = ({ children }) => {
 
   useEffect(() => {
     axios
-      .get('https://dummyjson.com/products')
+      .get('https://dummyjson.com/products/?limit=0')
       .then((response) => setInfos(response.data.products))
       .catch((error) => console.error('Error fetching data:', error));
   }, []);
