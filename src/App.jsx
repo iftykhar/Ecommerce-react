@@ -4,6 +4,7 @@ import './App.css'
 import Home from './pages/Home'
 import Shop from './pages/Shop'
 import RootLayout from './components/RootLayout'
+import ProductDetails from './PAGES/ProductDetails'
 
 function App() {
   
@@ -11,6 +12,8 @@ function App() {
     <Route element={<RootLayout />}>
       <Route path='/' element={<Home />} />
       <Route path='/shop' element={<Shop />} />
+      <Route path='/shop' element={<Shop />} />
+      <Route path='/shop/details' element={<ProductDetails />} />
     </Route>
   ))
 

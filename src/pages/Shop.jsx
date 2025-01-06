@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import PageHeading from '../components/PageHeading';
 import { apidata } from '../components/ContextApi';
 import { IoMdArrowDropdownCircle } from "react-icons/io";
+import { Link } from 'react-router-dom';
 // import React, {  } from 'react';
 
 
@@ -25,6 +26,16 @@ const Shop = () => {
 
   let [catShow, setCatShow] = useState(false)
   
+
+  let [priceItems, setPriceItems] = useState([])
+
+  const handelPriceFiltering = (value)=> {
+    
+    let priceFilteredItems = data.filter((item)=>item.price> value.min && item.price <= value.max)
+    
+    setPriceItems(priceFilteredItems)
+
+  }
 
   return (
     <>
@@ -80,16 +91,37 @@ const Shop = () => {
         </div>
         <div className="flex">
           <div className="w-[20%]">
-            <h2 onClick={()=>setCatShow(!catShow)} className="text-[24px] font-sans font-bold flex items-center gap-3">Shop By Category <IoMdArrowDropdownCircle /></h2>
-            {catShow &&
-            
-            <ul className='h-60 overflow-y-scroll'>
-              {category.map((item)=>(
-                <li onClick={()=>handleCategory(item)} className='p-4 border-b-[1px]'>{item}</li>
-              ))}
-            </ul>
+            <div className="mb-2">
+                  <h2 onClick={()=>setCatShow(!catShow)} className="text-[24px] font-sans font-bold flex items-center gap-3">Shop By Category <IoMdArrowDropdownCircle /></h2>
+                {catShow &&
+                
+                <ul className='h-60 overflow-y-scroll'>
+                  {category.map((item)=>(
+                    <li onClick={()=>handleCategory(item)} className='p-4 border-b-[1px]'>{item}</li>
+                  ))}
+                </ul>
 
-            }
+                }
+            </div>
+            
+          <div className="mb-2">
+                <h2  className="text-[24px] font-sans font-bold flex items-center gap-3">Shop By Price <IoMdArrowDropdownCircle /></h2>
+                
+                
+                <ul >
+                  {/* {category.map((item)=>(
+                    <li onClick={()=>handleCategory(item)} className='p-4 border-b-[1px]'>{item}</li>
+                  ))} */}
+                  <li onClick={()=>handelPriceFiltering({min: 0.00, max:50.00})} className='p-4 border-b-[1px]'>$0.00 - $50.00</li>
+                  <li onClick={()=>handelPriceFiltering({min: 50.01, max:150.00})} className='p-4 border-b-[1px]'>$50.01 - $150.00</li>
+                  <li onClick={()=>handelPriceFiltering({min: 150.01, max:250.00})} className='p-4 border-b-[1px]'>$150.01 - $250.00</li>
+                  <li onClick={()=>handelPriceFiltering({min: 250.01, max:500.00})} className='p-4 border-b-[1px]'>$250.01 - $500.00</li>
+                  <li onClick={()=>handelPriceFiltering({min: 500.01, max:10000.00})} className='p-4 border-b-[1px]'>$500.01 - $10000.00</li>
+                </ul>
+
+                
+          </div>
+            
           </div>
           <div className="w-[80%] flex flex-wrap justify-between py-2">
             {cat.length > 0 ? 
@@ -97,7 +129,11 @@ const Shop = () => {
               <div className="!w-[32%] shadow-lg group " key={item.id}>
                   <div className="flex justify-center bg-[#F6F7FB] pt-12 pb-4 px-6 relative overflow-hidden">
                       <img src={item.thumbnail} alt="" />
-                      <button className='text-base rounded-md absolute left-1/2 -translate-x-1/2 px-10 py-2 bg-green-500 -bottom-16 duration-300 ease-in-out group-hover:bottom-2'>View Details</button>
+                      {/* */}
+
+                      <Link to='/shop/details'>
+                      <button className='text-base rounded-md absolute left-1/2 -translate-x-1/2 px-10 py-2 bg-green-500 -bottom-16 duration-300 ease-in-out group-hover:bottom-2'>View Details</button> 
+                      </Link>
                       <div className="flex gap-3 absolute -left-40 top-0 group-hover:left-2 duration-300 ease-in-out">
                           <i>icon</i>
                           <i>icon</i>
@@ -111,6 +147,31 @@ const Shop = () => {
                   </div>
               </div>
             ))
+            :
+            priceItems.length > 0  ? 
+            priceItems.map((item) => (
+              <div className="!w-[32%] shadow-lg group " key={item.id}>
+                  <div className="flex justify-center bg-[#F6F7FB] pt-12 pb-4 px-6 relative overflow-hidden">
+                      <img src={item.thumbnail} alt="" />
+                      {/* */}
+
+                      <Link to='/shop/details'>
+                      <button className='text-base rounded-md absolute left-1/2 -translate-x-1/2 px-10 py-2 bg-green-500 -bottom-16 duration-300 ease-in-out group-hover:bottom-2'>View Details</button> 
+                      </Link>
+                      <div className="flex gap-3 absolute -left-40 top-0 group-hover:left-2 duration-300 ease-in-out">
+                          <i>icon</i>
+                          <i>icon</i>
+                          <i>icon</i>
+                      </div>
+                  </div>
+                  <div className="text-center pt-4 pb-10 group-hover:bg-[#2F1AC4]">
+                      <h2 className='text-[#FB2E86] text-[18px] group-hover:text-white'>{item.title}</h2>
+                      <h4 className='group-hover:text-white'>Code - Y523201</h4>
+                      <p className='group-hover:text-white'>${item.price}</p>
+                  </div>
+              </div>
+            )) 
+
             :
             data.map((item) => (
               <div className="!w-[32%] shadow-lg group " key={item.id}>
