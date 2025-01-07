@@ -16,7 +16,7 @@ const ProductDetails = () => {
     return (
     <section>
 
-      <PageHeading headline="Shop Grid Default" page="Product Details" />
+      <PageHeading headline="Product Details Default" page="Product Details" />
       <div className="container mx-auto">
             {singleProduct.map((item)=>(
                 <div className="">

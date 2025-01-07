@@ -1,9 +1,10 @@
 import React from 'react'
+import PageHeading from '../components/PageHeading'
 
 const Cart = () => {
   return (
     <>
-      cart
+     <PageHeading headline="Shopping Curt" page="shopping curt" />
     </>
   )
 }
