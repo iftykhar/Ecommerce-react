@@ -171,7 +171,7 @@ const handlePage  = (item)=>{
                         <img src={item.thumbnail} alt="" />
                         {/* */}
 
-                        <Link to='/shop/details'>
+                        <Link to={`/shop/${item.id}`}>
                         <button className='text-base rounded-md absolute left-1/2 -translate-x-1/2 px-10 py-2 bg-green-500 -bottom-16 duration-300 ease-in-out group-hover:bottom-2'>View Details</button> 
                         </Link>
                         <div className="flex gap-3 absolute -left-40 top-0 group-hover:left-2 duration-300 ease-in-out">
@@ -195,7 +195,7 @@ const handlePage  = (item)=>{
                         <img src={item.thumbnail} alt="" />
                         {/* */}
 
-                        <Link to='/shop/details'>
+                        <Link to={`/shop/${item.id}`}>
                         <button className='text-base rounded-md absolute left-1/2 -translate-x-1/2 px-10 py-2 bg-green-500 -bottom-16 duration-300 ease-in-out group-hover:bottom-2'>View Details</button> 
                         </Link>
                         <div className="flex gap-3 absolute -left-40 top-0 group-hover:left-2 duration-300 ease-in-out">
@@ -217,7 +217,7 @@ const handlePage  = (item)=>{
                 <div className="!w-[32%] shadow-lg group " key={item.id}>
                     <div className="flex justify-center bg-[#F6F7FB] pt-12 pb-4 px-6 relative overflow-hidden">
                         <img src={item.thumbnail} alt="" />
-                        <Link to='/shop/details'>
+                        <Link to={`/shop/${item.id}`}>
                         <button className='text-base rounded-md absolute left-1/2 -translate-x-1/2 px-10 py-2 bg-green-500 -bottom-16 duration-300 ease-in-out group-hover:bottom-2'>View Details</button> 
                         </Link>
                         <div className="flex gap-3 absolute -left-40 top-0 group-hover:left-2 duration-300 ease-in-out">
