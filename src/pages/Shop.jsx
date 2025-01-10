@@ -74,7 +74,7 @@ const handlePage  = (item)=>{
   setCurrentPage(item)
 }
 
-// console.log(pageNumbers);
+
 
 
   return (
