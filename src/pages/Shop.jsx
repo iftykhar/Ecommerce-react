@@ -4,6 +4,8 @@ import { apidata } from '../components/ContextApi';
 import { IoMdArrowDropdownCircle } from "react-icons/io";
 import { Link } from 'react-router-dom';
 import { CiSquareAlert } from 'react-icons/ci';
+import { useDispatch } from 'react-redux';
+// import { IoCartOutline } from "react-icons/io5";
 // import React, {  } from 'react';
 
 
@@ -75,11 +77,18 @@ const handlePage  = (item)=>{
 }
 
 
+const dispatch = useDispatch();
+
+const handleAddToCart = ()=> {
+  dispatch(abc(20))
+}
+
 
 
   return (
     <>
       <PageHeading headline="Shop Grid Default" page="Shop Grid Default" />
+
       <div className="container mx-auto">
       
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-10">
@@ -175,7 +184,7 @@ const handlePage  = (item)=>{
                         <button className='text-base rounded-md absolute left-1/2 -translate-x-1/2 px-10 py-2 bg-green-500 -bottom-16 duration-300 ease-in-out group-hover:bottom-2'>View Details</button> 
                         </Link>
                         <div className="flex gap-3 absolute -left-40 top-0 group-hover:left-2 duration-300 ease-in-out">
-                            <i>icon</i>
+                            <i onClick={handleAddToCart} >Cart </i>
                             <i>icon</i>
                             <i>icon</i>
                         </div>
@@ -199,7 +208,7 @@ const handlePage  = (item)=>{
                         <button className='text-base rounded-md absolute left-1/2 -translate-x-1/2 px-10 py-2 bg-green-500 -bottom-16 duration-300 ease-in-out group-hover:bottom-2'>View Details</button> 
                         </Link>
                         <div className="flex gap-3 absolute -left-40 top-0 group-hover:left-2 duration-300 ease-in-out">
-                            <i>icon</i>
+                            <i onClick={handleAddToCart} >Cart </i>
                             <i>icon</i>
                             <i>icon</i>
                         </div>
@@ -221,7 +230,7 @@ const handlePage  = (item)=>{
                         <button className='text-base rounded-md absolute left-1/2 -translate-x-1/2 px-10 py-2 bg-green-500 -bottom-16 duration-300 ease-in-out group-hover:bottom-2'>View Details</button> 
                         </Link>
                         <div className="flex gap-3 absolute -left-40 top-0 group-hover:left-2 duration-300 ease-in-out">
-                            <i>icon</i>
+                            <i onClick={handleAddToCart} >Cart </i>
                             <i>icon</i>
                             <i>icon</i>
                         </div>
@@ -297,3 +306,4 @@ const handlePage  = (item)=>{
 };
 
 export default Shop;
+
