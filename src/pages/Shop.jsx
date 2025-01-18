@@ -5,6 +5,7 @@ import { IoMdArrowDropdownCircle } from "react-icons/io";
 import { Link } from 'react-router-dom';
 import { CiSquareAlert } from 'react-icons/ci';
 import { useDispatch } from 'react-redux';
+import { abc } from '../Components/slice/cartSlice'
 // import { IoCartOutline } from "react-icons/io5";
 // import React, {  } from 'react';
 
@@ -79,8 +80,8 @@ const handlePage  = (item)=>{
 
 const dispatch = useDispatch();
 
-const handleAddToCart = ()=> {
-  dispatch(abc(20))
+const handleAddToCart = (item)=> {
+  dispatch(abc(item))
 }
 
 
@@ -184,7 +185,7 @@ const handleAddToCart = ()=> {
                         <button className='text-base rounded-md absolute left-1/2 -translate-x-1/2 px-10 py-2 bg-green-500 -bottom-16 duration-300 ease-in-out group-hover:bottom-2'>View Details</button> 
                         </Link>
                         <div className="flex gap-3 absolute -left-40 top-0 group-hover:left-2 duration-300 ease-in-out">
-                            <i onClick={handleAddToCart} >Cart </i>
+                            <i onClick={()=>handleAddToCart(item)} >Cart </i>
                             <i>icon</i>
                             <i>icon</i>
                         </div>
@@ -208,7 +209,7 @@ const handleAddToCart = ()=> {
                         <button className='text-base rounded-md absolute left-1/2 -translate-x-1/2 px-10 py-2 bg-green-500 -bottom-16 duration-300 ease-in-out group-hover:bottom-2'>View Details</button> 
                         </Link>
                         <div className="flex gap-3 absolute -left-40 top-0 group-hover:left-2 duration-300 ease-in-out">
-                            <i onClick={handleAddToCart} >Cart </i>
+                            <i onClick={()=>handleAddToCart(item)} >Cart </i>
                             <i>icon</i>
                             <i>icon</i>
                         </div>
@@ -230,7 +231,7 @@ const handleAddToCart = ()=> {
                         <button className='text-base rounded-md absolute left-1/2 -translate-x-1/2 px-10 py-2 bg-green-500 -bottom-16 duration-300 ease-in-out group-hover:bottom-2'>View Details</button> 
                         </Link>
                         <div className="flex gap-3 absolute -left-40 top-0 group-hover:left-2 duration-300 ease-in-out">
-                            <i onClick={handleAddToCart} >Cart </i>
+                            <i onClick={()=>handleAddToCart(item)} >Cart </i>
                             <i>icon</i>
                             <i>icon</i>
                         </div>
