@@ -5,7 +5,7 @@ import { IoMdArrowDropdownCircle } from "react-icons/io";
 import { Link } from 'react-router-dom';
 import { CiSquareAlert } from 'react-icons/ci';
 import { useDispatch } from 'react-redux';
-import { abc } from '../Components/slice/cartSlice'
+import { addToCart } from '../Components/slice/cartSlice'
 // import { IoCartOutline } from "react-icons/io5";
 // import React, {  } from 'react';
 
@@ -81,7 +81,7 @@ const handlePage  = (item)=>{
 const dispatch = useDispatch();
 
 const handleAddToCart = (item)=> {
-  dispatch(abc(item))
+  dispatch(addToCart(item))
 }
 
 

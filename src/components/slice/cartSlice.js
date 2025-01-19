@@ -6,15 +6,18 @@ const initialState = {
 
 export const cartSlice = createSlice({
   name: 'cartItemManager',
-  initialState,
+  initialState:{
+    cartItems: []
+  },
   reducers: {
-    abc: (state, action) => {
-      console.log(action);
+    addToCart: (state, action) => {
+      // console.log(action.payload);
+      state.cartItems.push(action.payload)
     },
   },
 });
 
-export const { abc } = cartSlice.actions;
+export const { addToCart } = cartSlice.actions;
 
 export default cartSlice.reducer;
 
