@@ -81,8 +81,9 @@ const handlePage  = (item)=>{
 const dispatch = useDispatch();
 
 const handleAddToCart = (item)=> {
-  dispatch(addToCart(item))
+  dispatch(addToCart({...item, qty: 1}))
 }
+
 
 
 

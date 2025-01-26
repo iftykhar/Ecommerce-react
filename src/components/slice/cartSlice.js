@@ -7,13 +7,19 @@ const initialState = {
 export const cartSlice = createSlice({
   name: 'cartItemManager',
   initialState:{
-    cartItems: []
+    cartItems: localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : []
   },
   reducers: {
     addToCart: (state, action) => {
-      // console.log(action.payload);
-      state.cartItems.push(action.payload);
-      localStorage.setItem('cart', JSON.stringify(state.cartItems));
+      
+      let findProduct = state.cartItems.findIndex((item)=> item.id == action.payload.id)
+
+      if(findProduct === -1 ){
+        state.cartItems.push(action.payload);
+      }else{
+        state.cartItems[findProduct].qty += 1
+      }
+      localStorage.setItem('cart', JSON.stringify(action.payload));
     },
   },
 });
