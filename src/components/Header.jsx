@@ -4,6 +4,7 @@ import { CiUser } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
 import { IoCartOutline } from "react-icons/io5";
 import React from 'react'
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -39,7 +40,7 @@ const Header = () => {
                     </li>
                     <li className="flex items-center"><p>Login</p> <CiUser /></li>
                     <li className="flex items-center"><p>Wishlist</p> <CiHeart /></li>
-                    <li className="items-center text-2xl"> <IoCartOutline /> </li>
+                    <li className="items-center text-2xl"><Link to='/cart'> <IoCartOutline  /></Link> </li>
                 </ul>
             </div>
         </div>
