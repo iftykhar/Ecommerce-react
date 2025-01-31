@@ -1,13 +1,20 @@
 import React from 'react'
 import PageHeading from '../components/PageHeading'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { FiMinus,FiPlus  } from "react-icons/fi";
+import { increament } from '../Components/slice/cartSlice';
 
 const Cart = () => {
 
   const cartData = useSelector((state)=>state.cartItemManager.cartItems)
 
-  console.log(cartData);
+  // console.log(cartData);
+
+  const dispatch = useDispatch()
+
+  const handleIncreament = (index)=>{
+    dispatch(increament(index))
+  }
   
   
 
@@ -17,7 +24,7 @@ const Cart = () => {
 
      
     
-            {cartData.map((item) => (
+            {cartData.map((item,index) => (
               <div className="container mx-auto">
                 <div className="flex  items-center justify-between">
                   <div className="flex items-center">
@@ -28,9 +35,9 @@ const Cart = () => {
                     <span>${item.price}</span>
                   </div>
                   <div className="flex gap-4 items-center bg-[#BEBFC2]">
-                     <FiMinus/>
+                     <FiMinus />
                      <span>{item.qty}</span>
-                     <FiPlus/>
+                     <FiPlus onClick={()=>handleIncreament(index)}/>
                   </div>
                   <div className="">
                     <span>${(item.price)*(item.qty)}</span>

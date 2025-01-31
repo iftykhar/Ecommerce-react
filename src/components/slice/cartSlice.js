@@ -23,13 +23,13 @@ export const cartSlice = createSlice({
     },
     
     increament:(state,action)=>{
-      console.log(action);
+      state.cartItems[action.payload].qty += 1;
       
     }
   },
 });
 
-export const { addToCart } = cartSlice.actions;
+export const { addToCart,increament } = cartSlice.actions;
 
 export default cartSlice.reducer;
 
