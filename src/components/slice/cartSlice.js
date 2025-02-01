@@ -25,11 +25,15 @@ export const cartSlice = createSlice({
     increament:(state,action)=>{
       state.cartItems[action.payload].qty += 1;
       
+    },
+
+    decreament:(state,action)=>{
+      state.cartItems[action.payload].qty -= 1;
     }
   },
 });
 
-export const { addToCart,increament } = cartSlice.actions;
+export const { addToCart,increament,decreament } = cartSlice.actions;
 
 export default cartSlice.reducer;
 
