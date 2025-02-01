@@ -2,7 +2,7 @@ import React from 'react'
 import PageHeading from '../components/PageHeading'
 import { useDispatch, useSelector } from 'react-redux'
 import { FiMinus,FiPlus  } from "react-icons/fi";
-import { decreament, increament } from '../Components/slice/cartSlice';
+import { decreament, increament } from '../components/slice/cartSlice';
 
 const Cart = () => {
 
