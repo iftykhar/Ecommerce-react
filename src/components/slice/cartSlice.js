@@ -28,6 +28,7 @@ export const cartSlice = createSlice({
     },
 
     decreament:(state,action)=>{
+      if(state.cartItems[action.payload].qty > 1)
       state.cartItems[action.payload].qty -= 1;
     }
   },
