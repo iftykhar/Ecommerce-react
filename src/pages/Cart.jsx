@@ -21,8 +21,18 @@ const Cart = () => {
   }
   
 
+  let{totalPrice, totalQuantity} = cartData.reduce((acc, curr)=>{
+
+    acc.totalPrice += (curr.price * curr.qty);
+    acc.totalQuantity += curr.qty;
+
+    return acc
+
+  }, {totalPrice: 0,totalQuantity: 0})
   
+  console.log(totalQuantity);
   
+
 
   return (
     <>
@@ -60,8 +70,8 @@ const Cart = () => {
           <div className="bg-red-500 mb-5">
             <h2>Cart Totals</h2>
             <div className="">
-              <h2 className='mb-2'>Total Price: $46465</h2>
-              <h2 className='mb-2'>Total Quantity: 5</h2>
+              <h2 className='mb-2'>Total Price: ${totalPrice.toFixed(1)}</h2>
+              <h2 className='mb-2'>Total Quantity: {totalQuantity}</h2>
 
             </div>
           </div>
