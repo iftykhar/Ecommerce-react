@@ -42,6 +42,7 @@ const Cart = () => {
     <div className="container mx-auto">
       <div className="flex justify-between">
         <div className="w-[70%]">
+          
             {cartData.map((item,index) => (
               
               <div className="flex  items-center justify-between">
