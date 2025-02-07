@@ -48,16 +48,13 @@ const Cart = () => {
                   <h2 className='font-josef text-2xl'>Product</h2>                  
                 </div>
                 <div className="items-center w-[20%]">
-                    <h2 className='font-josef text-2xl'>Product</h2>
+                    <h2 className='font-josef text-2xl'>Price</h2>
                 </div>
                 <div className=" w-[20%]">
-                    <h2 className='font-josef text-2xl'>Product</h2>
+                    <h2 className='font-josef text-2xl'>Quantity</h2>
                 </div>
-                {/* <div className="flex gap-4 items-center bg-[#BEBFC2] w-20">
-                    <h2 className='font-josef text-2xl'>Product</h2>
-                </div> */}
                 <div className="w-[20%]">
-                  <h2 className='font-josef text-2xl'>Product</h2>                  
+                  <h2 className='font-josef text-2xl'>Total</h2>                  
                 </div>
           </div>
             {cartData.map((item,index) => (
@@ -83,6 +80,11 @@ const Cart = () => {
                 </div>
               </div> 
             ))}
+
+              <div className="mt-6 flex justify-between">
+              <button className="bg-[#FB2E86] text-white py-3 px-20">Update Curt</button>
+              <button className="bg-[#FB2E86] text-white py-3 px-20">Clear Curt</button>
+              </div>
         </div>
         <div className="w-[25%]">
           <div className="py-5">
