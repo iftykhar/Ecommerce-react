@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import { apidata } from './ContextApi';
+import React from 'react';
 
 // const LatestProduct = () => {
 //   return (
@@ -12,6 +14,10 @@ import React from 'react'
 //   )
 // }
 const LatestProduct = () => {
+
+
+    let response = useContext(apidata);
+
     const products = Array(3).fill({
       id: 1,
       title: "Comfort Handy Craft",

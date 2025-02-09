@@ -54,7 +54,7 @@ const Header = () => {
                         <Link className="text-2xl" to="/cart"> 
                             <IoCartOutline />
                         </Link> 
-                        <span className="absolute -top-1 -right-1 h-4 w-4 flex justify-center items-center bg-red-400 px-2 py-2 rounded-full">
+                        <span className="absolute -top-1 -right-1 h-4 w-4 flex justify-center items-center bg-red-400 px-2 py-2 rounded-full animate-bounce">
                             {cartData.length}
                         </span>
                     </li>
