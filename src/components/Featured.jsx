@@ -20,9 +20,7 @@ const Featured = () => {
         // autoplaySpeed: 20000,
       };
 
-    // let data = useContext(apidata);
-    // let data = useContext(apidata);
-    // console.log(data);
+    
     let response = useContext(apidata);
 
     // Slice the response to only get the first 8 or 9 products

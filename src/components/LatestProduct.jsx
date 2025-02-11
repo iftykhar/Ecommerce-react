@@ -1,6 +1,7 @@
 // import React, { useContext } from 'react';
 // import { apidata } from './ContextApi';
 import React from 'react';
+import chair from '../assets/chair.png';
 
 const LatestProduct = () => {
 //   return (
@@ -164,7 +165,46 @@ const LatestProduct = () => {
     //                     </div> 
     // </section>
     <section>   
-        
+        <div className="container mx-auto">
+                <div className="text-center pt-8 pb-4">
+                    <h2 className='text-[42px] font-josef font-bold'>Leatest Products</h2>
+                </div>
+            
+            <div className=" flex justify-between">
+                <div className="">
+                    <div className="">
+                        <img className='' src={chair} alt="" />
+                    </div>
+                    <div className="">
+
+                    </div>
+                </div>
+                <div className="">
+                    <div className="">
+                        <img className='' src={chair} alt="" />
+                    </div>
+                    <div className="">
+
+                    </div>
+                </div>
+                <div className="">
+                    <div className="">
+                        <img className='' src={chair} alt="" />
+                    </div>
+                    <div className="">
+
+                    </div>
+                </div>
+                <div className="">
+                    <div className="">
+                        <img className='' src={chair} alt="" />
+                    </div>
+                    <div className="">
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     
     );
