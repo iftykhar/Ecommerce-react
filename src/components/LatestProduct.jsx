@@ -171,7 +171,18 @@ const LatestProduct = () => {
                 </div>
             
             <div className=" flex justify-between">
-                <div className="">
+                <div className=" W-[30%]">
+                    <div className="">
+                        <img className='' src={chair} alt="" />
+                        <div className="">
+                            
+                        </div>
+                    </div>
+                    <div className="">
+                        
+                    </div>
+                </div>
+                {/* <div className="">
                     <div className="">
                         <img className='' src={chair} alt="" />
                     </div>
@@ -194,15 +205,7 @@ const LatestProduct = () => {
                     <div className="">
 
                     </div>
-                </div>
-                <div className="">
-                    <div className="">
-                        <img className='' src={chair} alt="" />
-                    </div>
-                    <div className="">
-
-                    </div>
-                </div>
+                </div> */}
             </div>
         </div>
     </section>
