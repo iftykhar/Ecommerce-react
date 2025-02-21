@@ -2,6 +2,7 @@
 // import { apidata } from './ContextApi';
 import React from 'react';
 import chair from '../assets/chair.png';
+import sofa from '../assets/sofa_image_1166.png'
 
 const LatestProduct = () => {
 //   return (
@@ -170,18 +171,26 @@ const LatestProduct = () => {
                     <h2 className='text-[42px] font-josef font-bold'>Leatest Products</h2>
                 </div>
             
-            <div className=" flex justify-between">
-                <div className=" W-[30%]">
-                    <div className="">
-                        <img className='' src={chair} alt="" />
+            <div className="  flex justify-between">
+            
+                <div className=" !W-[30%]">
+                    <div className="w-full p-4">
+                        <img className="  " src={sofa} alt="" />
                         <div className="">
-                            
+
                         </div>
                     </div>
-                    <div className="">
-                        
+                    <div className="flex justify-between">
+                        <div className="">
+                            <p>comfortable HandyCraft</p>
+                        </div>
+                        <div className="flex ">
+                            <div className="text-2x"l>$45.00</div>
+                            <div className="text-red-500" >$65.00</div>
+                        </div>
                     </div>
                 </div>
+                
                 {/* <div className="">
                     <div className="">
                         <img className='' src={chair} alt="" />
