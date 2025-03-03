@@ -16,7 +16,13 @@ const LatestProduct = () => {
 //   )
 // // }
 // const LatestProduct = () => {
-
+    const products = [
+        { id: 1, title: "Comfort Handy Craft", image: sofa, price: 4200 },
+        { id: 2, title: "Luxury Sofa", image: chair, price: 5200 },
+        { id: 3, title: "Modern Chair", image: sofa, price: 3200 },
+        { id: 4, title: "Modern Chair", image: sofa, price: 3200 },
+        { id: 5, title: "Modern Chair", image: sofa, price: 3200 },
+      ];
 
 //     let response = useContext(apidata);
 
@@ -171,51 +177,49 @@ const LatestProduct = () => {
                     <h2 className='text-[42px] font-josef font-bold'>Leatest Products</h2>
                 </div>
             
-            <div className="  flex justify-between">
-            
-                <div className=" !W-[30%]">
+            {/* <div className="  flex  justify-between w-full">
+            {products.map((product) => (
+                <div key={product.id} className=" !W-[30%]">
                     <div className="w-full p-4">
-                        <img className="  " src={sofa} alt="" />
+                        <img className="  " src={product.image} alt={product.title}"" />
                         <div className="">
 
                         </div>
                     </div>
-                    <div className="flex justify-between">
-                        <div className="">
+                    <div className="flex justify-between ">
+                        <div className="px-4">
                             <p>comfortable HandyCraft</p>
                         </div>
                         <div className="flex ">
-                            <div className="text-2x"l>$45.00</div>
+                            <div className="">$45.00</div>
                             <div className="text-red-500" >$65.00</div>
                         </div>
                     </div>
                 </div>
                 
-                {/* <div className="">
-                    <div className="">
-                        <img className='' src={chair} alt="" />
-                    </div>
-                    <div className="">
+            ))}
+                
+            </div> */}
 
-                    </div>
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {products.map((product) => (
+            <div key={product.id} className=" p-4  hover:shadow-xl transition-all">
+                <div className="flex justify-center bg-gray-100 p-6 rounded-lg">
+                <img src={product.image} alt={product.title} className="w-3/4 h-1/2" />
                 </div>
-                <div className="">
+                <div className="flex justify-between mt-4">
                     <div className="">
-                        <img className='' src={chair} alt="" />
+                        <h2 className='text-lg  text-gray-800'>{product.title}</h2>
                     </div>
                     <div className="">
-
+                        <p className='text-indigo-600 text-xl '>${product.price}</p>
                     </div>
+                
                 </div>
-                <div className="">
-                    <div className="">
-                        <img className='' src={chair} alt="" />
-                    </div>
-                    <div className="">
-
-                    </div>
-                </div> */}
             </div>
+            ))}
+        </div>
         </div>
     </section>
     
