@@ -3,6 +3,9 @@ import chair from '../assets/chair.png';
 import Slider from "react-slick";
 // import { apidata } from './ContextApi';
 import { apidata } from './ContextApi';
+import { CiHeart } from "react-icons/ci";
+import { IoCartOutline } from "react-icons/io5";
+import { HiMagnifyingGlassPlus } from "react-icons/hi2";
 
 
 
@@ -37,11 +40,12 @@ const Featured = () => {
                         <div className="!w-[95%] shadow-lg group" key={item.id}>
                             <div className="flex justify-center bg-[#F6F7FB] pt-12 pb-4 px-6 relative overflow-hidden">
                                 <img src={item.thumbnail} alt="" />
-                                <button className='text-base rounded-md absolute left-1/2 -translate-x-1/2 px-10 py-2 bg-green-500 -bottom-16 duration-300 ease-in-out group-hover:bottom-2'>View Details</button>
-                                <div className="flex gap-3 absolute -left-40 top-0 group-hover:left-2 duration-300 ease-in-out">
-                                    <i>icon</i>
-                                    <i>icon</i>
-                                    <i>icon</i>
+                            
+                                <div className="flex gap-3 absolute -left-10 top-3 group-hover:left-4 duration-300 ease-in-out p-2 text-2xl font-bold">
+
+                                    <i className=""><IoCartOutline /></i>
+                                    <i className=""><CiHeart /></i>
+                                    <i className=""><HiMagnifyingGlassPlus /></i>
                                 </div>
                             </div>
                             <div className="text-center pt-4 pb-10 group-hover:bg-[#2F1AC4]">
