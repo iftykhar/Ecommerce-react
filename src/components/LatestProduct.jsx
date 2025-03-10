@@ -3,6 +3,11 @@
 import React from 'react';
 import chair from '../assets/chair.png';
 import sofa from '../assets/sofa_image_1166.png'
+import { CiHeart } from "react-icons/ci";
+import { IoCartOutline } from "react-icons/io5";
+import { HiMagnifyingGlassPlus } from "react-icons/hi2";
+
+
 
 const LatestProduct = () => {
 //   return (
@@ -204,11 +209,17 @@ const LatestProduct = () => {
         {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product) => (
-            <div key={product.id} className=" p-4  hover:shadow-xl transition-all">
-                <div className="flex justify-center bg-gray-100 p-6 rounded-lg">
-                <img src={product.image} alt={product.title} className="w-3/4 h-1/2" />
+            <div key={product.id} className="   hover:shadow-xl transition-all">
+                <div className="flex justify-center relative overflow-hidden bg-gray-100 p-6 rounded-lg">
+                <img src={product.image} alt={product.title} className=" h-1/2" />
+                    <div className="absolute -left-40 top-0 group-hover:left-2 duration-300 ease-in-out p-2 text-2xl font-bold">
+                    
+                            <i className=""><IoCartOutline /></i>
+                            <i className=""><CiHeart /></i>
+                            <i className=""><HiMagnifyingGlassPlus /></i>
+                    </div>
                 </div>
-                <div className="flex justify-between mt-4">
+                <div className="flex justify-between mt-4 px-4">
                     <div className="">
                         <h2 className='text-lg  text-gray-800'>{product.title}</h2>
                     </div>
